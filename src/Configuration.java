@@ -2,9 +2,9 @@ public class Configuration {
     /*
         Notation
         --------
-        1 --> Prefix
-        2 --> Infix
-        3 --> Postfix
+        1 --> Prefix (+ A B)
+        2 --> Infix (A + B)
+        3 --> Postfix (A B +)
      */
 
     private int notation;
