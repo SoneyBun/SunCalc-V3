@@ -2,12 +2,13 @@ public class Configuration {
     /*
         Notation
         --------
-        1 --> Prefix (+ A B)
-        2 --> Infix (A + B)
-        3 --> Postfix (A B +)
+        1 --> Prefix (+ A B) (! A)
+        2 --> Infix (A + B) (! A)
+        3 --> Postfix (A B +) (A !)
      */
 
     private int notation;
+    private String notationString;
 
     /*
         Angular Mode
@@ -17,6 +18,7 @@ public class Configuration {
      */
 
     private boolean angularMode;
+    private String angularModeString;
 
     /*
         Default
@@ -27,15 +29,15 @@ public class Configuration {
 
     public Configuration() {
         notation = 2;
+        notationString = "Infix";
         angularMode = false;
+        angularModeString = "Degrees";
     }
 
     // View Configuration
 
     public String toString() {
-        String n = (notation == 1) ? "Prefix" : (notation == 2) ? "Infix" : "Postfix";
-        String aM = (angularMode) ? "Radians" : "Degrees";
-        return "Notation: " +  n + "\nAngular Mode: " + aM;
+        return "Notation: " + notationString + "\nAngular Mode: " + angularModeString;
     }
 
     // Getter Methods
@@ -44,17 +46,27 @@ public class Configuration {
         return notation;
     }
 
+    public String getNotationString() {
+        return notationString;
+    }
+
     public boolean getAngularMode() {
         return angularMode;
+    }
+
+    public String getAngularModeString() {
+        return angularModeString;
     }
 
     // Setter Methods
 
     public void setNotation(int n) {
         notation = n;
+        notationString = (n == 1) ? "Prefix" : (n == 2) ? "Infix" : "Postfix";
     }
 
     public void setAngularMode(boolean aM) {
         angularMode = aM;
+        angularModeString = (aM) ? "Radians" : "Degrees";
     }
 }
