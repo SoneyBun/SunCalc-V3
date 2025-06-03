@@ -11,82 +11,44 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("SunCalc V3\n");
-        int choice = getChoice("Menu");
-        switch(choice) {
-            case 1 :
-                configure();
-                getChoice("Menu");
-            case 2 :
-                getChoice("Math");
-                break;
-            case 3 :
-                System.out.println("Health is coming soon");
-                break;
+        while(true) {
+            int choice = getChoice("Menu");
+            switch (choice) {
+                case 1:
+                    configure();
+                case 2:
+                    getChoice("Math");
+                    break;
+                case 3:
+                    System.out.println("Health is coming soon");
+                    break;
+            }
         }
     }
 
     public static int getChoice(String type) {
-        boolean valid = false;
+        return switch (type) {
+            case "Menu" -> getInput("Select Choice:\n↳ (1) ~ Configure\n↳ (2) ~ Math\n↳ (3) ~ Health", 3);
+            case "Configure" -> getInput("Select Choice:\n↳ (1) ~ Notation\n↳ (2) ~ Angular Mode", 2);
+            case "Notation" -> getInput("Select Choice:\n↳ (1) ~ Prefix\n↳ (2) ~ Infix\n↳ (3) ~ Postfix", 3);
+            case "Angular Mode" -> getInput("Select Choice:\n↳ (1) ~ Degrees\n↳ (2) ~ Radians", 2);
+            default -> -1;
+        };
+    }
+
+    public static int getInput(String choices, int max) {
         int input;
-        switch (type) {
-            case "Menu" :
-                while(!valid) {
-                    System.out.println("Select Choice:\n↳ (1) ~ Configure\n↳ (2) ~ Math\n↳ (3) ~ Health");
-                    try {
-                        input = Integer.parseInt(scan.nextLine());
-                        if(input > 0 && input < 4) {
-                            valid = true;
-                            return input;
-                        }
-                    } catch (NumberFormatException e) {
-                        System.out.println(invalid);
-                    }
+        while(true) {
+            System.out.println(choices);
+            try {
+                input = Integer.parseInt(scan.nextLine());
+                if(input > 0 && input < (max + 1)) {
+                    return input;
                 }
-                break;
-            case "Configure" :
-                while(!valid) {
-                    System.out.println("Select Choice:\n↳ (1) ~ Notation\n↳ (2) ~ Angular Mode");
-                    try {
-                        input = Integer.parseInt(scan.nextLine());
-                        if(input > 0 && input < 3) {
-                            valid = true;
-                            return input;
-                        }
-                    } catch (NumberFormatException e) {
-                        System.out.println(invalid);
-                    }
-                }
-                break;
-            case "Notation" :
-                while(!valid) {
-                    System.out.println("Select Choice:\n↳ (1) ~ Prefix\n↳ (2) ~ Infix\n↳ (3) ~ Postfix");
-                    try {
-                        input = Integer.parseInt(scan.nextLine());
-                        if (input > 0 && input < 4) {
-                            valid = true;
-                            return input;
-                        }
-                    } catch (NumberFormatException e) {
-                        System.out.println(invalid);
-                    }
-                }
-                break;
-            case "Angular Mode" :
-                while(!valid) {
-                    System.out.println("Select Choice:\n↳ (1) ~ Degrees\n↳ (2) ~ Radians");
-                    try {
-                        input = Integer.parseInt(scan.nextLine());
-                        if(input > 0 && input < 3) {
-                            valid = true;
-                            return input;
-                        }
-                    } catch (NumberFormatException e) {
-                        System.out.println(invalid);
-                    }
-                }
-                break;
+            } catch (NumberFormatException e) {
+                System.out.println(invalid);
+            }
         }
-        return -1;
     }
 
     public static void configure() {
