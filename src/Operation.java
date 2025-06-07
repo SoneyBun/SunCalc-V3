@@ -7,6 +7,9 @@ public class Operation {
     private final double number1;
     private double number2;
 
+    // Modes
+    private final boolean angularMode = Main.config.getAngularMode();
+
     // Operation Errors
 
     static Error unknownOperator = new Error(51, "Unknown Operator");

@@ -24,9 +24,14 @@ public class Main {
                 case 2:
                     System.out.println("Enter Math:");
                     while(true) {
-                        store = new Data(scan.nextLine());
-                        math = new Operation(store.getOperator(), store.getNumbers());
-                        System.out.println(math.executeOperation());
+                        String term = scan.nextLine();
+                        if(term.equalsIgnoreCase("quit")) {
+                            break;
+                        } else {
+                            store = new Data(scan.nextLine());
+                            math = new Operation(store.getOperator(), store.getNumbers());
+                            System.out.println(math.executeOperation());
+                        }
                     }
                 case 3:
                     System.out.println("Health is coming soon");

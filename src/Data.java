@@ -8,12 +8,12 @@ public class Data {
     // Data Variables
 
     private final String input;
-    private ArrayList<String> variables = new ArrayList<String>();
+    private final ArrayList<String> variables = new ArrayList<>();
 
     // Return Variables
 
     private String operator;
-    private ArrayList<Double> numbers = new ArrayList<Double>();
+    private final ArrayList<Double> numbers = new ArrayList<>();
 
     public Data(String i) {
         input = i;
