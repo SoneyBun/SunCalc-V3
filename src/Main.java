@@ -3,12 +3,14 @@ import java.util.Scanner;
 
 public class Main {
     // Essential Objects
+
     public static Configuration config = new Configuration();
     static Scanner scan = new Scanner(System.in);
     static Data store;
     static Operation math;
 
     // Main Errors
+
     static Error invalid = new Error(41, "Invalid Input");
 
     public static void main(String[] args) {
@@ -18,6 +20,7 @@ public class Main {
             switch (choice) {
                 case 1:
                     configure();
+                    break;
                 case 2:
                     System.out.println("Enter Math:");
                     while(true) {

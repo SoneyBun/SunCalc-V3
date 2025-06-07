@@ -2,13 +2,16 @@ import java.util.ArrayList;
 
 public class Data {
     // Receiving Configuration
+
     private final int notation = Main.config.getNotation();
 
     // Data Variables
+
     private final String input;
     private ArrayList<String> variables = new ArrayList<String>();
 
     // Return Variables
+
     private String operator;
     private ArrayList<Double> numbers = new ArrayList<Double>();
 
