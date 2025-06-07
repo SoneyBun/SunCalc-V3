@@ -5,10 +5,11 @@ public class Main {
     // Essential Objects
     public static Configuration config = new Configuration();
     static Scanner scan = new Scanner(System.in);
+    static Data store;
+    static Operation math;
 
     // Main Errors
-
-    static Error invalid = new Error(01, "Invalid Input");
+    static Error invalid = new Error(41, "Invalid Input");
 
     public static void main(String[] args) {
         System.out.println("SunCalc V3\n");
@@ -18,8 +19,12 @@ public class Main {
                 case 1:
                     configure();
                 case 2:
-                    getChoice("Math");
-                    break;
+                    System.out.println("Enter Math:");
+                    while(true) {
+                        store = new Data(scan.nextLine());
+                        math = new Operation(store.getOperator(), store.getNumbers());
+                        System.out.println(math.executeOperation());
+                    }
                 case 3:
                     System.out.println("Health is coming soon");
                     break;

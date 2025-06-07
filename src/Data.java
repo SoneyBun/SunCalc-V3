@@ -6,11 +6,11 @@ public class Data {
 
     // Data Variables
     private final String input;
-    private ArrayList<String> variables;
+    private ArrayList<String> variables = new ArrayList<String>();
 
     // Return Variables
     private String operator;
-    private ArrayList<Double> numbers;
+    private ArrayList<Double> numbers = new ArrayList<Double>();
 
     public Data(String i) {
         input = i;
