@@ -18,7 +18,6 @@ public class Data {
     public Data(String i) {
         input = i;
         enterVariables();
-        translateVariables();
     }
 
     private void enterVariables() {
@@ -35,9 +34,7 @@ public class Data {
         if(!builder.isEmpty()) {
             variables.add(builder.toString());
         }
-    }
 
-    private void translateVariables() {
         switch (notation) {
             case 1 :
                 operator = variables.get(0);
@@ -65,6 +62,8 @@ public class Data {
                 break;
         }
     }
+
+    // Getter Methods
 
     public String getOperator() {
         return operator;
