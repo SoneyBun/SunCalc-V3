@@ -1,11 +1,11 @@
 public class Error {
     // Error Identification
 
-    private int identification;
+    private final int identification;
 
     // Error Reason
 
-    private String reason;
+    private final String reason;
 
     // Error Constructor
 
