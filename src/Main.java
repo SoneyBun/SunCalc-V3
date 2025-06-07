@@ -1,17 +1,16 @@
 import java.util.Scanner;
-//import java.util.ArrayList;
 
 public class Main {
     // Essential Objects
 
     public static Configuration config = new Configuration();
-    static Scanner scan = new Scanner(System.in);
+    static final Scanner scan = new Scanner(System.in);
     static Data store;
     static Operation math;
 
     // Main Errors
 
-    static Error invalid = new Error(41, "Invalid Input");
+    static final Error invalid = new Error(41, "Invalid Input");
 
     public static void main(String[] args) {
         System.out.println("SunCalc V3\n");
@@ -28,7 +27,7 @@ public class Main {
                         if(term.equalsIgnoreCase("quit")) {
                             break;
                         } else {
-                            store = new Data(scan.nextLine());
+                            store = new Data(term);
                             math = new Operation(store.getOperator(), store.getNumbers());
                             System.out.println(math.executeOperation());
                         }
