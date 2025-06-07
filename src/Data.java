@@ -20,17 +20,17 @@ public class Data {
 
     private void enterVariables() {
         char[] variableArray = input.toCharArray();
-        String builder = "";
+        StringBuilder builder = new StringBuilder();
         for(char ch : variableArray) {
             if(ch == ' ') {
-                variables.add(builder);
-                builder = "";
+                variables.add(builder.toString());
+                builder = new StringBuilder();
             } else {
-                builder += ch;
+                builder.append(ch);
             }
         }
         if(!builder.isEmpty()) {
-            variables.add(builder);
+            variables.add(builder.toString());
         }
     }
 
@@ -54,7 +54,7 @@ public class Data {
                 }
                 break;
             case 3 :
-                operator = variables.get(variables.size() - 1);
+                operator = variables.getLast();
                 numbers.add(Double.parseDouble(variables.get(0)));
                 if(variables.size() == 3) {
                     numbers.add(Double.parseDouble(variables.get(1)));
