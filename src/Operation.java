@@ -4,7 +4,7 @@ public class Operation {
     // Variables
 
     private final String operator;
-    private final double number1;
+    private double number1;
     private double number2;
 
     // Modes
@@ -24,9 +24,18 @@ public class Operation {
         }
     }
 
+    private double toRadians(double n) {
+        return n * Math.PI / 180;
+    }
+
+    private double toDegrees(double n) {
+        return n * 180 / Math.PI;
+    }
+
     public String executeOperation() {
+        double result;
         return switch (operator) {
-            // Basic
+            // Basic Arithmetic
 
             case "+", "add", "plus" : yield number1 + " + " + number2 + " = " + (number1 + number2);
             case "-", "subtract", "minus" : yield number1 + " - " + number2 + " = " + (number1 - number2);
@@ -45,6 +54,24 @@ public class Operation {
             case ">=" : yield number1 + " >= " + number2 + " --> " + (number1 >= number2);
             case "<=" : yield number1 + " <= " + number2 + " --> " + (number1 <= number2);
             case "=", "==" : yield number1 + " " + operator + " " + number2 + " --> " + (number1 == number2);
+
+            // Trigonometry
+
+            case "sin", "sine" : yield "sin(" + number1 + ") = " + Math.sin(angularMode ? number1 : toRadians(number1));
+            case "cos", "cosine" : yield "cos(" + number1 + ") = " + Math.cos(angularMode ? number1 : toRadians(number1));
+            case "tan", "tangent" : yield "tan(" + number1 + ") = " + Math.tan(angularMode ? number1 : toRadians(number1));
+
+            // Inverse Trigonometry
+
+            case "asin", "arcsin", "arcsine" :
+                result = Math.asin(number1);
+                yield "asin" + number1 + ") = " + (angularMode ? result : toDegrees(result));
+            case "acos", "arccos", "arccosine" :
+                result = Math.acos(number1);
+                yield "asin" + number1 + ") = " + (angularMode ? result : toDegrees(result));
+            case "atan", "arctan", "arctangent" :
+                result = Math.atan(number1);
+                yield "atan(" + number1 + ") = " + (angularMode ? result : toDegrees(result));
 
             // Default
 
