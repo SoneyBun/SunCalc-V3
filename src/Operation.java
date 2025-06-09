@@ -4,7 +4,7 @@ public class Operation {
     // Variables
 
     private final String operator;
-    private double number1;
+    private final double number1;
     private double number2;
 
     // Modes
@@ -13,8 +13,9 @@ public class Operation {
 
     // Operation Errors
 
-    static final Error unknownOperator = new Error(51, "Unknown Operator");
-    static final Error divideByZero = new Error(52, "Divide By Zero");
+    static final Error unknownOperator = new Error(61, "Unknown Operator");
+    static final Error divideByZero = new Error(62, "Divide By Zero");
+    static final Error negativeBase = new Error(63, "Logarithm With A Negative Base");
 
     public Operation(String o, ArrayList<Double> n) {
         operator = o;
@@ -61,6 +62,20 @@ public class Operation {
             case "cos", "cosine" : yield "cos(" + number1 + ") = " + Math.cos(angularMode ? number1 : toRadians(number1));
             case "tan", "tangent" : yield "tan(" + number1 + ") = " + Math.tan(angularMode ? number1 : toRadians(number1));
 
+            // Power
+
+            case "^", "exp", "exponent", "pwr", "power" : yield number1 + "^" + number2 + " = " + Math.pow(number1, number2);
+            case "rt", "root" : yield number1 + "^ 1/" + number2 + " = " + Math.pow(number1, 1 / number2);
+            case "log", "logarithm" :
+                if(number2 == 0 || number2 == 10) {
+                    yield "log(" + number1 + ") = " + Math.log(number1) / Math.log(10);
+                } else if(number2 > 0) {
+                    yield "log" + number2 + "(" + number1 + ") = " + (Math.log(number1) / Math.log(number2));
+                }
+                yield negativeBase.toString();
+
+            case "ln" :
+                yield "ln(" + number1 + ") = " + Math.log(number1);
             // Inverse Trigonometry
 
             case "asin", "arcsin", "arcsine" :

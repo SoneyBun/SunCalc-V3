@@ -10,7 +10,7 @@ public class Main {
 
     // Main Errors
 
-    static final Error invalid = new Error(41, "Invalid Input");
+    static final Error invalid = new Error(51, "Invalid Input");
 
     public static void main(String[] args) {
         System.out.println("SunCalc V3\n");
