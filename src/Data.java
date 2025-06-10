@@ -77,7 +77,6 @@ public class Data {
             case "e" -> variables.set(index, String.valueOf(Math.E));
             case "phi" -> variables.set(index, String.valueOf(Irrational.PHI));
             case "pycon" -> variables.set(index, String.valueOf(Irrational.PYCON));
-            default -> {} // No change if not an irrational
         }
     }
 

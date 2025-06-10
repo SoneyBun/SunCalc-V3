@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class Operation {
@@ -25,14 +26,6 @@ public class Operation {
         }
     }
 
-    private double toRadians(double n) {
-        return n * Math.PI / 180;
-    }
-
-    private double toDegrees(double n) {
-        return n * 180 / Math.PI;
-    }
-
     public String executeOperation() {
         double result;
         return switch (operator) {
@@ -46,7 +39,7 @@ public class Operation {
                     yield number1 + " / " + number2 + " = " + (number1 / number2);
                 }
                 yield divideByZero.toString();
-            case "%", "mod" : yield number1 + " % " + number2 + " = " + (number1 % number2);
+            case "%", "mod", "modulus" : yield number1 + " % " + number2 + " = " + (number1 % number2);
             case "||", "abval", "absval" : yield "|" + number1 + "| = " + Math.abs(number1);
 
             // Comparison
@@ -66,7 +59,9 @@ public class Operation {
             case "cos", "cosine" : yield "cos(" + number1 + ") = " + Math.cos(angularMode ? number1 : toRadians(number1));
             case "tan", "tangent" : yield "tan(" + number1 + ") = " + Math.tan(angularMode ? number1 : toRadians(number1));
 
-            // Power
+            // Factorial --> Coming Soon
+
+            // Exponents And Logarithms
 
             case "^", "exp", "exponent", "pwr", "pow", "power" : yield number1 + "^" + number2 + " = " + Math.pow(number1, number2);
             case "rt", "root" : yield number1 + "^ 1/" + number2 + " = " + Math.pow(number1, 1 / number2);
@@ -98,5 +93,23 @@ public class Operation {
 
             default : yield unknownOperator.toString();
         };
+    }
+
+    // Helper Methods
+
+    private double toRadians(double n) {
+        return n * Math.PI / 180;
+    }
+
+    private double toDegrees(double n) {
+        return n * 180 / Math.PI;
+    }
+
+    private static BigInteger factorialOf(int n) {
+        BigInteger result = BigInteger.ONE;
+        for(int i = 2; i <= n; i++) {
+            result = result.multiply(BigInteger.valueOf(i));
+        }
+        return result;
     }
 }
