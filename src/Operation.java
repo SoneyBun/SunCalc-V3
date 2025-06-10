@@ -47,14 +47,18 @@ public class Operation {
                 }
                 yield divideByZero.toString();
             case "%", "mod" : yield number1 + " % " + number2 + " = " + (number1 % number2);
+            case "||", "abval", "absval" : yield "|" + number1 + "| = " + Math.abs(number1);
 
-            // Boolean Algebra
+            // Comparison
 
             case ">" : yield number1 + " > " + number2 + " --> " + (number1 > number2);
             case "<" : yield number1 + " < " + number2 + " --> " + (number1 < number2);
             case ">=" : yield number1 + " >= " + number2 + " --> " + (number1 >= number2);
             case "<=" : yield number1 + " <= " + number2 + " --> " + (number1 <= number2);
             case "=", "==" : yield number1 + " " + operator + " " + number2 + " --> " + (number1 == number2);
+            case "!=" : yield number1 + " != " + number2 + " --> " + (number1 != number2);
+            case "max", "maximum" : yield Math.max(number1, number2) + "";
+            case "min", "minimum" : yield Math.min(number1, number2) + "";
 
             // Trigonometry
 
@@ -64,18 +68,20 @@ public class Operation {
 
             // Power
 
-            case "^", "exp", "exponent", "pwr", "power" : yield number1 + "^" + number2 + " = " + Math.pow(number1, number2);
+            case "^", "exp", "exponent", "pwr", "pow", "power" : yield number1 + "^" + number2 + " = " + Math.pow(number1, number2);
             case "rt", "root" : yield number1 + "^ 1/" + number2 + " = " + Math.pow(number1, 1 / number2);
             case "log", "logarithm" :
                 if(number2 == 0 || number2 == 10) {
                     yield "log(" + number1 + ") = " + Math.log(number1) / Math.log(10);
+                } else if(number2 == Math.E) {
+                    yield "ln(" + number1 + ") = " + Math.log(number1);
                 } else if(number2 > 0) {
-                    yield "log" + number2 + "(" + number1 + ") = " + (Math.log(number1) / Math.log(number2));
+                    yield "log" + number2 + "(" + number1 + ") = " + Math.log(number1) / Math.log(number2);
                 }
                 yield negativeBase.toString();
-
             case "ln" :
                 yield "ln(" + number1 + ") = " + Math.log(number1);
+
             // Inverse Trigonometry
 
             case "asin", "arcsin", "arcsine" :
