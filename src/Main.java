@@ -40,7 +40,7 @@ public class Main {
                         case 2 -> sunListMenu();
                     }
                 }
-                case 3 -> System.out.println("Health: "); // Coming Soon
+                case 3 -> Health.start();
                 case 4 -> {
                     System.out.println("Thank you for using SunCalc V3\nSession Concluded");
                     System.exit(0);
@@ -132,6 +132,7 @@ public class Main {
             System.out.println("No active SunList. Please create or select one first.");
             return;
         }
+
         SunList list = SunList.getList(activeSunListName);
         if (list == null) {
             System.out.println("Active SunList not found. Please create or select one.");
@@ -139,17 +140,7 @@ public class Main {
             return;
         }
 
-        System.out.println("Select Analysis:");
-        System.out.println("1) Mean X, Mean Y");
-        System.out.println("2) Std Dev X, Std Dev Y");
-        System.out.println("3) Correlation Coefficient");
-        System.out.println("4) Linear Regression (slope & intercept)");
-        System.out.println("5) Polynomial Regression (degree 2)");
-        System.out.println("6) Sum Squares Total, Regression, Error");
-        System.out.println("7) Back");
-
-        int analysisChoice = getInput("Choose (1-7):", 7);
-        switch (analysisChoice) {
+        switch (getChoice("SunListAnalysis")) {
             case 1 -> System.out.printf("Mean X: %.4f, Mean Y: %.4f%n", list.meanX(), list.meanY());
             case 2 -> System.out.printf("Std Dev X: %.4f, Std Dev Y: %.4f%n", list.stdDevX(), list.stdDevY());
             case 3 -> System.out.printf("Correlation Coefficient (r): %.4f%n", list.correlationCoefficient());
@@ -163,12 +154,11 @@ public class Main {
             }
             case 6 -> System.out.printf("SST: %.4f, SSR: %.4f, SSE: %.4f%n",
                     list.sumSquaresTotal(), list.sumSquaresRegression(), list.sumSquaresError());
-            case 7 -> {
-                // Back
-            }
+            case 7 -> {}
             default -> System.out.println(invalid);
         }
     }
+
 
     // Helper to parse integer input safely
     public static int parseIntInput() {
@@ -199,8 +189,10 @@ public class Main {
             case "Notation" -> getInput("Select Choice:\n↳ (1) ~ Prefix\n↳ (2) ~ Infix\n↳ (3) ~ Postfix", 3);
             case "Angular Mode" -> getInput("Select Choice:\n↳ (1) ~ Degrees\n↳ (2) ~ Radians", 2);
             case "Math" -> getInput("Select Choice:\n↳ (1) ~ Arithmetic\n↳ (2) ~ SunList", 2);
+            case "Health" -> getInput("Select Health Option:\n↳ (1) ~ BMI\n↳ (2) ~ BMR\n↳ (3) ~ Height Estimate\n↳ (4) ~ Back", 4);
             case "SunList" -> getInput("Select Choice:\n↳ (1) ~ Create SunList\n↳ (2) ~ Modify SunList\n↳ (3) ~ SunList Methods\n↳ (4) ~ Back", 4);
             case "Create" -> getInput("Select Choice:\n↳ (1) ~ Numbers\n↳ (2) ~ Points", 2);
+            case "SunListAnalysis" -> getInput("Select Analysis:\n↳ (1) ~ Mean X, Mean Y\n↳ (2) ~ Std Dev X, Std Dev Y\n↳ (3) ~ Correlation Coefficient\n↳ (4) ~ Linear Regression (slope & intercept)\n↳ (5) ~ Polynomial Regression (degree 2)\n↳ (6) ~ Sum Squares Total, Regression, Error\n↳ (7) ~ Back", 7);
             default -> -1;
         };
     }
