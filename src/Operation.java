@@ -54,6 +54,11 @@ public class Operation {
             case "max", "maximum" : yield Math.max(number1, number2) + "";
             case "min", "minimum" : yield Math.min(number1, number2) + "";
 
+            // Number Manipulation
+
+            case "rnd", "round" : yield ((int) (number1 + .5)) + "";
+            case "trunc", "truncate" : yield ((int) number1) + "";
+
             // Trigonometry
 
             case "sin", "sine" : yield "sin(" + number1 + ") = " + Math.sin(angularMode ? number1 : toRadians(number1));
