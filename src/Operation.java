@@ -17,6 +17,7 @@ public class Operation {
     static final Error unknownOperator = new Error(61, "Unknown Operator");
     static final Error divideByZero = new Error(62, "Divide By Zero");
     static final Error negativeBase = new Error(63, "Logarithm With A Negative Base");
+    static final Error invalidFactorialInput = new Error(64, "Factorial input must be a non-negative integer");
 
     public Operation(String o, ArrayList<Double> n) {
         operator = o;
@@ -59,7 +60,15 @@ public class Operation {
             case "cos", "cosine" : yield "cos(" + number1 + ") = " + Math.cos(angularMode ? number1 : toRadians(number1));
             case "tan", "tangent" : yield "tan(" + number1 + ") = " + Math.tan(angularMode ? number1 : toRadians(number1));
 
-            // Factorial --> Coming Soon
+            // Factorial
+
+            case "!", "factorial" :
+                if (number1 < 0 || number1 != Math.floor(number1)) {
+                    yield invalidFactorialInput.toString();
+                } else {
+                    BigInteger fact = factorialOf((int) number1);
+                    yield (int) number1 + "! = " + fact;
+                }
 
             // Exponents And Logarithms
 
