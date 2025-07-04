@@ -5,4 +5,4 @@
 
 ---
 
-Documentation Coming Soon
+[Currency](Documentation/Currency.md)
