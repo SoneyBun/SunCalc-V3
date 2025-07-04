@@ -18,5 +18,5 @@
   <a href="Documentation/Health.md" target="_blank">
   <img alt="Static Badge" src="https://img.shields.io/badge/HEALTH-Orange?style=for-the-badge&logoColor=%23fa6900&color=%23fa6900">
   </a>
-  
+
 </div>
