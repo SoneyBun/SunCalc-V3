@@ -9,6 +9,6 @@
 <div align="center">
   <img alt="Static Badge" src="https://img.shields.io/badge/DOCUMENTATION%3A-Orange?style=for-the-badge&logoColor=%23fa6900&color=%23fa6900">
   <a href="Documentation/Currency.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/CURRENCY-Orange?style=for-the-badge&logoColor=%23fa6900&color=%23fa6900"></a>
-  <a href="Documentation/FAQ.md target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/FAQ-ORANGE?style=for-the-badge&color=%23fa6900"></a>
+  <a href="Documentation/FAQ.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/FAQ-ORANGE?style=for-the-badge&color=%23fa6900"></a>
   <a href="Documentation/Health.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/HEALTH-Orange?style=for-the-badge&logoColor=%23fa6900&color=%23fa6900"></a>
 </div>
