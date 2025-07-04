@@ -1,7 +1,7 @@
 >[!NOTE]
 >SunCalc is a backend calculator by AP Students, for AP Students.
 
-![newsun](https://github.com/user-attachments/assets/5bc02195-acd4-4440-af55-6c0820e8cf96)
+![newsun3](https://github.com/user-attachments/assets/f6227953-3455-453c-b4a4-c8c180846d0a)
 
 ---
 
