@@ -1,4 +1,4 @@
-![currencysun](https://github.com/user-attachments/assets/8f0ada20-a94d-4610-b507-d7412bdefb62)
+![newcur](https://github.com/user-attachments/assets/e724be0f-51be-4f08-aca3-1151ec25542b)
 
 ---
 
