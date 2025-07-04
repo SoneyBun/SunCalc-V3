@@ -1,6 +1,8 @@
+<!-- Disclaimer -->
 >[!CAUTION]
 >Despite the programmed formulas being well known, SunCalc's Health feature should not influence any medical decisions at all.
 
+<!-- SunCalc V3 Logo -->
 ![newsun3](https://github.com/user-attachments/assets/f6227953-3455-453c-b4a4-c8c180846d0a)
 
 <!-- Documentation -->
