@@ -1,4 +1,4 @@
->[!TIP]
+>[!NOTE]
 >SunCalc is a backend calculator by AP Students, for AP Students.
 
 
