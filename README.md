@@ -5,4 +5,5 @@
 
 ---
 
+<!-- Currency is for SunGames --> 
 [Currency](Documentation/Currency.md)
