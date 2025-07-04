@@ -6,6 +6,8 @@ public class Health {
     // Error Messages
     static final Error invalidNumber = new Error(71, "Invalid numeric input");
     static final Error invalidPercent = new Error(72, "Body fat % must be a number between 0 and 100");
+    static final Error invalidSystem = new Error(73, "Invalid measurement system (expected Metric or Imperial)");
+    static final Error invalidGender = new Error(74, "Invalid gender (expected Male or Female)");
 
     // Flags
     private static boolean metric;
@@ -21,6 +23,21 @@ public class Health {
                 case 3 -> estimateHeight();
                 case 4 -> { return; }
                 default -> System.out.println(invalidNumber);
+            }
+        }
+    }
+
+    // Get Measurement System from user (true = Metric, false = Imperial)
+    public static boolean getMeasurementSystem() {
+        while (true) {
+            System.out.print("Enter Measurement System (Metric/Imperial): ");
+            String input = scan.nextLine().trim().toLowerCase();
+            if (input.startsWith("m")) {
+                return true;
+            } else if (input.startsWith("i")) {
+                return false;
+            } else {
+                System.out.println(invalidSystem);
             }
         }
     }
@@ -61,20 +78,26 @@ public class Health {
         }
     }
 
-    // Option Choosers
-    private static void askSystem() {
-        System.out.print("Enter Measurement System (Metric/Imperial): ");
-        metric = scan.nextLine().trim().toLowerCase().startsWith("m");
-    }
-
+    // Ask Gender from user
     private static void askGender() {
-        System.out.print("Biological Gender (Male/Female): ");
-        male = scan.nextLine().trim().toLowerCase().startsWith("m");
+        while (true) {
+            System.out.print("Biological Gender (Male/Female): ");
+            String input = scan.nextLine().trim().toLowerCase();
+            if (input.startsWith("m")) {
+                male = true;
+                break;
+            } else if (input.startsWith("f")) {
+                male = false;
+                break;
+            } else {
+                System.out.println(invalidGender);
+            }
+        }
     }
 
     // BMI Calculation
     public static void calculateBMI() {
-        askSystem();
+        metric = getMeasurementSystem();
         double height = metric ? getDouble("Height (cm): ") / 100 : getDouble("Height (in): ") * 0.0254;
         double weight = metric ? getDouble("Weight (kg): ") : getDouble("Weight (lbs): ") * 0.453592;
 
@@ -88,7 +111,7 @@ public class Health {
 
     // BMR Calculation (3 Equations)
     public static void calculateBMR() {
-        askSystem();
+        metric = getMeasurementSystem();
         askGender();
 
         double height = metric ? getDouble("Height (cm): ") : getDouble("Height (in): ") * 2.54;
@@ -110,7 +133,7 @@ public class Health {
 
     // Height Estimator
     public static void estimateHeight() {
-        askSystem();
+        metric = getMeasurementSystem();
         askGender();
 
         double mother = getDouble("Mother's Height (" + (metric ? "cm" : "in") + "): ");
