@@ -7,11 +7,10 @@
 
 <!-- Documentation -->
 <div align="center">
-  <img alt="Static Badge" src="https://img.shields.io/badge/!-ORANGE?style=for-the-badge&color=%23fa6900">
   <a href="Documentation/FAQ.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/FAQ-ORANGE?style=for-the-badge&color=%23fa6900"></a>
   <a href="Documentation/Games.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/GAMES-ORANGE?style=for-the-badge&color=%23fa6900"></a>
   <a href="Documentation/Health.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/HEALTH-Orange?style=for-the-badge&logoColor=%23fa6900&color=%23fa6900"></a>
-  <img alt="Static Badge" src="https://img.shields.io/badge/!-ORANGE?style=for-the-badge&color=%23fa6900">
+  <a href="Documentation/Health.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/MATH-ORANGE?style=for-the-badge&color=%23fa6900"></a>
 </div>
 
 <div align="center"><img alt="Static Badge" src="https://img.shields.io/badge/BY%20AP%20STUDENTS.%20FOR%20AP%20STUDENTS-ORANGE?style=for-the-badge&color=%23fa6900"></div>
