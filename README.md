@@ -3,7 +3,8 @@
 >Despite the programmed formulas being well known, SunCalc's Health feature should not influence any medical decisions at all.
 
 <!-- Banner -->
-![SunCalcV3Logo](https://github.com/user-attachments/assets/9924a1b4-e36c-4331-b14f-47bd7170281d)
+![SunCalc Banner](https://github.com/user-attachments/assets/ea8263de-f494-4e47-8f76-41481ef2ad26)
+
 
 <!-- Documentation -->
 <div align="center">
