@@ -1,6 +1,6 @@
 <!-- Note -->
 >[!NOTE]
->There are currencies supported that aren't listed. View [Currency.java](../src/game/Currency.java) to see every currency supported.
+>There are currencies supported that aren't listed. View [Currency.java](../../src/game/Currency.java) to see every currency supported.
 
 <!-- Banner -->
 ![Currency Banner](https://github.com/user-attachments/assets/d9ca16da-be79-4a3e-a281-1a91ae6f50fd)
