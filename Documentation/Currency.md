@@ -1,3 +1,7 @@
+<!-- Note -->
+>[!NOTE]
+>There are currencies supported that aren't listed.
+
 <!-- Banner -->
 ![Currency Banner](https://github.com/user-attachments/assets/d9ca16da-be79-4a3e-a281-1a91ae6f50fd)
 <div align="center">Supported currencies for SunGames</div>
@@ -7,7 +11,7 @@
 
 | Name | Symbol | Flag | USD Rate |
 |:----:|:------:|:---------------:|:--------:|
-| Dollar | $ | 🇺🇸 | $1 |
+| Dollar (US) | $ | 🇺🇸 | $1 |
 | Cent | ¢ | 🇺🇸 | $0.01 |
 | Euro | € | 🇪🇺 |
 | Pound | £ | 🇬🇧 |
@@ -15,25 +19,22 @@
 | Won | ₩ | 🇰🇵 🇰🇷 |
 | Ruble | ₽ | 🇷🇺 |
 | IndRupee | ₹ | 🇮🇳 |
-| Peso | ₱ |
-| Naira | ₦ |
-| Tugrik | ₮ |
-| BenRupee | ৲ |
-| MainRupee | Rs |
-| Rupee | Rs |
-| TamRupee | ௹ |
-| Baht | ฿ |
-| Riel | ៛ |
-| Shekel | ₪ |
-| Dong | ₫ |
-| Kip | ₭ |
-| Guarani | ₲ |
-| Hryvnia | ₴ |
-| Cedi | ₵ |
-| Rial | ﷼ |
-| Balboa | B/. |
+| Peso | ₱ | 🇦🇷 🇨🇱 🇨🇴 🇨🇺 🇩🇴 🇲🇽 🇵🇭 🇺🇾 |
+| Naira | ₦ | 🇳🇬 |
+| Tugrik | ₮ | 🇲🇳 |
+| Baht | ฿ | 🇹🇭 |
+| Riel | ៛ | 🇰🇭 |
+| Shekel | ₪ | 🇮🇱 |
+| Dong | ₫ | 🇻🇳 |
+| Kip | ₭ | 🇱🇦 |
+| Hryvnia | ₴ | 🇺🇦 |
+| Cedi | ₵ | 🇬🇭 |
+| Rial | ﷼ | 🇸🇦 |
+| Balboa | B/. | 🇵🇦 |
 
 </div>
+
+# Beyond this is for testing purposes
 
 ## 💱 Currency Exchange
 
