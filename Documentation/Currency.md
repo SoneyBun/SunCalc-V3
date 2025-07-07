@@ -5,16 +5,16 @@
 ---
 <div align="center">
 
-| Name | Symbol | Primary Country | USD Rate |
+| Name | Symbol | Flag | USD Rate |
 |:----:|:------:|:---------------:|:--------:|
-| Dollar | $ | 🇺🇸 | 1x |
-| Cent | ¢ | 🇦🇺
-| Euro | € |
-| Pound | £ |
-| Yen | ¥ |
-| Won | ₩ |
-| Ruble | ₽ |
-| IndRupee | ₹ |
+| Dollar | $ | 🇺🇸 | $1 |
+| Cent | ¢ | 🇺🇸 | $0.01 |
+| Euro | € | 🇪🇺 |
+| Pound | £ | 🇬🇧 |
+| Yen | ¥ | 🇯🇵 |
+| Won | ₩ | 🇰🇵 🇰🇷 |
+| Ruble | ₽ | 🇷🇺 |
+| IndRupee | ₹ | 🇮🇳 |
 | Peso | ₱ |
 | Naira | ₦ |
 | Tugrik | ₮ |
@@ -30,6 +30,8 @@
 | Guarani | ₲ |
 | Hryvnia | ₴ |
 | Cedi | ₵ |
+| Rial | ﷼ |
+| Balboa | B/. |
 
 </div>
 
