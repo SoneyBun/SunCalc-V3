@@ -1,0 +1,51 @@
+name: Update Currency Rates
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'  # every 12 hours
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Fetch Rates
+        id: get_rates
+        run: |
+          fetch() {
+            curl -s "https://api.exchangerate.host/convert?from=USD&to=$1" | jq -r '.result'
+          }
+
+          echo "eur=$(fetch EUR)" >> $GITHUB_OUTPUT
+          echo "gbp=$(fetch GBP)" >> $GITHUB_OUTPUT
+          echo "jpy=$(fetch JPY)" >> $GITHUB_OUTPUT
+          echo "rub=$(fetch RUB)" >> $GITHUB_OUTPUT
+          echo "inr=$(fetch INR)" >> $GITHUB_OUTPUT
+          echo "php=$(fetch PHP)" >> $GITHUB_OUTPUT
+          echo "ngn=$(fetch NGN)" >> $GITHUB_OUTPUT
+          echo "pab=$(fetch PAB)" >> $GITHUB_OUTPUT
+          echo "date=$(date -u +"%Y-%m-%d %H:%M UTC")" >> $GITHUB_OUTPUT
+
+      - name: Replace in Currency.md
+        run: |
+          FILE="Documentation/Currency.md"
+          sed -i "s/<!--RATE_EUR-->.*<!--END_EUR-->/<!--RATE_EUR-->${{ steps.get_rates.outputs.eur }}<!--END_EUR-->/" $FILE
+          sed -i "s/<!--RATE_GBP-->.*<!--END_GBP-->/<!--RATE_GBP-->${{ steps.get_rates.outputs.gbp }}<!--END_GBP-->/" $FILE
+          sed -i "s/<!--RATE_JPY-->.*<!--END_JPY-->/<!--RATE_JPY-->${{ steps.get_rates.outputs.jpy }}<!--END_JPY-->/" $FILE
+          sed -i "s/<!--RATE_RUB-->.*<!--END_RUB-->/<!--RATE_RUB-->${{ steps.get_rates.outputs.rub }}<!--END_RUB-->/" $FILE
+          sed -i "s/<!--RATE_INR-->.*<!--END_INR-->/<!--RATE_INR-->${{ steps.get_rates.outputs.inr }}<!--END_INR-->/" $FILE
+          sed -i "s/<!--RATE_PHP-->.*<!--END_PHP-->/<!--RATE_PHP-->${{ steps.get_rates.outputs.php }}<!--END_PHP-->/" $FILE
+          sed -i "s/<!--RATE_NGN-->.*<!--END_NGN-->/<!--RATE_NGN-->${{ steps.get_rates.outputs.ngn }}<!--END_NGN-->/" $FILE
+          sed -i "s/<!--RATE_PAB-->.*<!--END_PAB-->/<!--RATE_PAB-->${{ steps.get_rates.outputs.pab }}<!--END_PAB-->/" $FILE
+          sed -i "s/<!--DATE-->.*<!--ENDDATE-->/<!--DATE-->${{ steps.get_rates.outputs.date }}<!--ENDDATE-->/" $FILE
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git commit -am "🔁 Update currency rates"
+          git push
