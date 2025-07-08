@@ -13,5 +13,6 @@
   <a href="Documentation/FAQ.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/FAQ-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
   <a href="Documentation/Games.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/GAMES-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
   <a href="Documentation/Health.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Health-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
+  <a href="Images" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Images-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
   <a href="Documentation/Math.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Math-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
 </div>
