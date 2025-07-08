@@ -6,12 +6,12 @@
 ![SunCalc Banner](https://github.com/user-attachments/assets/ea8263de-f494-4e47-8f76-41481ef2ad26)
 
 
+
 <!-- Documentation -->
 <div align="center">
-  <a href="Documentation/FAQ.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/FAQ-ORANGE?style=for-the-badge&color=%23fa6900"></a>
-  <a href="Documentation/Games.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/GAMES-ORANGE?style=for-the-badge&color=%23fa6900"></a>
-  <a href="Documentation/Health.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/HEALTH-Orange?style=for-the-badge&logoColor=%23fa6900&color=%23fa6900"></a>
-  <a href="Documentation/Math.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/MATH-ORANGE?style=for-the-badge&color=%23fa6900"></a>
+  <a href="https://discord.gg/h4gZaq4D7A" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/DISCORD-SunCalc?style=for-the-badge&logo=discord&logoColor=%23ffffff&color=%235865F2"></a>
+  <a href="Documentation/FAQ.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/FAQ-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
+  <a href="Documentation/Games.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/GAMES-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
+  <a href="Documentation/Health.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Health-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
+  <a href="Documentation/Math.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Math-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
 </div>
-
-<div align="center"><img alt="Static Badge" src="https://img.shields.io/badge/BY%20AP%20STUDENTS.%20FOR%20AP%20STUDENTS-ORANGE?style=for-the-badge&color=%23fa6900"></div>
