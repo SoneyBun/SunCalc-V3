@@ -4,7 +4,7 @@
 
 <!-- Documentation -->
 &nbsp;<div align="center">
-  <a href="Currency.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/CURRENCY-Orange?style=for-the-badge&logoColor=%23fa6900&color=%23fa6900"></a>
+  <a href="Currency.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Currency-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
 </div>
 
 
