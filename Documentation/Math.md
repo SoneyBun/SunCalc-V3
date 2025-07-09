@@ -4,6 +4,7 @@
 
 <!-- Documentation -->
 &nbsp;<div align="center">
+  <a href="https://en.wikipedia.org/wiki/Point_(geometry)" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/Point-SunCalc?style=for-the-badge&logo=wikipedia&logoColor=%23000000&color=%23ffffff"></a>
   <a href="SunList.md" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/SunList-SunCalc?style=for-the-badge&logo=github&logoColor=%23ffffff&color=%23fa6900"></a>
 </div>
 
