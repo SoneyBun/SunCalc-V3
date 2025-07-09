@@ -9,3 +9,6 @@
 - HEX: #fa6900
 - HSL: (25, 100%, 49%)
 - RGB: (250, 105, 0)
+
+## Potential Lua(U) Version 🔷
+The original developers of SunCalc are considering creating a LuaU variant of SunCalc V3 to be utilized on Roblox Studio.
