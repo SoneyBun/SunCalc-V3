@@ -9,4 +9,4 @@
 
 ---
 
-Documentation coming soon.
+- Though these formulas are well known, they fail to acknowledge factors like bone density, diets, and others. Use the formulas for fun and not to base medical decisions off of.
