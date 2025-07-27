@@ -2,6 +2,9 @@
 >[!CAUTION]
 >Despite the programmed formulas being well known, SunCalc's Health feature should not influence any medical decisions at all.
 
+>[!NOTE]
+>SunCalc V3 is in open beta. Documentation isn't complete. Code is subject to change prior to the official release.
+
 <!-- Banner -->
 ![SunCalc Banner](https://github.com/user-attachments/assets/ea8263de-f494-4e47-8f76-41481ef2ad26)
 
