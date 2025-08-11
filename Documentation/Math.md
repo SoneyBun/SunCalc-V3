@@ -18,7 +18,6 @@ The Math Module provides a wide range of arithmetic, comparison, trigonometric, 
 ## ⚠️ Disclaimers
 - This module performs calculations exactly as requested by the user. Ensure all inputs are valid before execution.
 - Incorrect or invalid values will return a descriptive error code rather than performing the calculation.
-- Report any issues at: [https://bit.ly/SunCode](https://bit.ly/SunCode)
 
 ---
 
