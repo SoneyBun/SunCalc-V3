@@ -1,4 +1,7 @@
 <!-- Disclaimer -->
+>[!NOTE]
+>One year of SunCalc 🥳
+
 >[!CAUTION]
 >Despite the programmed formulas being well known, SunCalc's Health feature should not influence any medical decisions at all.
 
