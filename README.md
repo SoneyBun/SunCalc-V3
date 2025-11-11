@@ -1,14 +1,9 @@
 <!-- Disclaimer -->
->[!NOTE]
->🥳 One year of SunCalc, view the older version [here](https://github.com/SoneyBun/SunCalc).
-
 >[!CAUTION]
 >Despite the programmed formulas being well known, SunCalc's Health feature should not influence any medical decisions at all.
 
 <!-- Banner -->
 ![SunCalc Banner](https://github.com/user-attachments/assets/ea8263de-f494-4e47-8f76-41481ef2ad26)
-
-
 
 <!-- Documentation -->
 <div align="center">
