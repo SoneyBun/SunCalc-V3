@@ -5,6 +5,7 @@
 &nbsp;<div align="center">
   
   <a href="https://www.canva.com" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/CANVA-SUNCALC?style=for-the-badge&logo=Canva&color=%237d2ae8"></a>
+  <a href="https://openai.com" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/OPENAI-SUNCALC?style=for-the-badge&color=%23ffffff"></a>
   <a href="https://shields.io/badges" target="_blank"><img alt="Static Badge" src="https://img.shields.io/badge/SHIELDS.IO-SUNCALC?style=for-the-badge&logo=Shields.io&color=%2397ca00"></a> 
 </div>
 
