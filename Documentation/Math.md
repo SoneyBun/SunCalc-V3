@@ -172,3 +172,104 @@ Handles execution of a single mathematical operation based on a specified operat
 - **Angle Conversion** — `toRadians` / `toDegrees` convert values when angular mode requires it.
 - **Factorial Calculation** — `factorialOf(int n)` uses `BigInteger` multiplication for arbitrarily large results.
 - **GCD** — Recursive Euclidean algorithm used internally by both `gcd` and `lcm`.
+
+---
+
+
+<div align="center">Graphing available within SunCalc</div>
+
+---
+
+## 📌 Overview
+
+The **Graph Module** renders mathematical plots directly in the terminal as ASCII art. It is accessed via **Math → Graph** and supports two modes: plotting a named function over an x range, or visualising a previously created SunList as a scatter plot.
+
+The plot area is **62 × 22 characters**. Coordinate axes are drawn automatically when they fall within the visible range, and the y axis is always auto-scaled to fit the output values.
+
+---
+
+## ⚠️ Disclaimers
+
+- Output quality depends on terminal width. A minimum width of **80 characters** is recommended.
+- Trig function input and output respect the current **Angular Mode** setting (Degrees / Radians), configured under **Configure → Angular Mode**.
+
+---
+
+## 🔹 Core Class: `Graph`
+
+### Key Responsibilities
+- Evaluate a named function across the x range and map results to a character grid.
+- Auto-scale the y axis with a small padding margin.
+- Draw coordinate axes and the origin when they are in range.
+- Overlay a linear regression line on SunList scatter plots.
+
+### Public Methods
+
+| Method | Description |
+|--------|-------------|
+| `plotFunction(func, xMin, xMax)` | Renders f(x) = func over the given x range |
+| `plotPoints(list)` | Renders a SunList scatter plot with a linear regression overlay |
+| `printHelp()` | Prints the list of all supported function names to the console |
+| `evaluate(func, x)` | Evaluates a named function at a single x value |
+
+---
+
+## 📐 Supported Functions
+
+| Category | Names |
+|----------|-------|
+| Trigonometry | `sin` `cos` `tan` `asin` `acos` `atan` |
+| Hyperbolic | `sinh` `cosh` `tanh` |
+| Power / Root | `sqrt` `cbrt` `square` `sq` `x^2` `cube` `x^3` |
+| Logarithm | `ln` `log` `log2` |
+| Other | `abs` `floor` `ceil` `sgn` `inv` `1/x` `x` |
+
+---
+
+## 📈 Graph Function — How to Use
+
+1. Navigate to **Math → Graph → Graph Function**.
+2. The list of available functions is printed automatically.
+3. Enter a function name (e.g. `sin`, `sqrt`, `x^2`).
+4. Enter an **X min** and **X max** value.
+5. The graph is rendered immediately with an auto-scaled y axis.
+
+**Example — `sin`, x ∈ [−6.28, 6.28]:**
+```
+f(x) = sin   x ∈ [-6.2800, 6.2800]  (* = function)
+
+          +--------------------------------------------------------------+
+  1.0000 |           ****                        ****                    |
+         |         **    **                    **    **                  |
+         |        *        *                  *        *                 |
+         |       *          *                *          *                |
+  0.0000 |------*------------*--------------*------------*---------------|
+         |     *              *            *              *              |
+         |    *                *          *                *             |
+         |                      *        *                  *        *   |
+ -1.0000 |                       ********                    ********   |
+          +--------------------------------------------------------------+
+            -6.2800                                              6.2800
+```
+
+---
+
+## 🔵 Graph SunList — How to Use
+
+1. First create a SunList via **Math → SunList → Create SunList** using **Points** mode.
+2. Navigate to **Math → Graph → Graph SunList**.
+3. The most recently created SunList is plotted automatically.
+4. A linear regression line is drawn whenever two or more points are present.
+
+---
+
+## 🗺 Plot Symbol Legend
+
+| Symbol | Meaning |
+|--------|---------|
+| `*` | Function value |
+| `o` | SunList data point |
+| `.` | Linear regression fit line |
+| `\|` | Y-axis |
+| `-` | X-axis |
+| `+` | Intersection of axes (origin) |
