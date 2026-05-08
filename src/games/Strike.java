@@ -20,11 +20,11 @@ public class Strike {
     public String getStrikeMessage() {
         strikes++;
         if (bet > money) {
-            return "Strike " + strikes + ": You cannot bet more than what you have!\nReport any problems at https://bit.ly/SunCode";
+            return "Strike " + strikes + ": You cannot bet more than what you have!";
         } else if (bet == 0) {
-            return "Strike " + strikes + ": You cannot bet a value of zero!\nReport any problems at https://bit.ly/SunCode";
+            return "Strike " + strikes + ": You cannot bet a value of zero!";
         } else if (bet < 0) {
-            return "Strike " + strikes + ": You cannot bet a negative value!\nReport any problems at https://bit.ly/SunCode";
+            return "Strike " + strikes + ": You cannot bet a negative value!";
         }
         return "";
     }

@@ -18,16 +18,19 @@ public class SunGames {
         }
 
         while (true) {
-            System.out.println("\nYou have " + userCurrency.getCurrencyType() + money + " " + userCurrency.getCurrencyName() + userCurrency.getPlural() + ".");
-            System.out.println("Select a game to play:");
+            System.out.println("\nYou have "
+                    + userCurrency.getCurrencyType() + money + " "
+                    + userCurrency.getCurrencyName() + userCurrency.getPlural() + ".");
+            System.out.println("Select a game:");
             System.out.println("↳ (1) Dice Game");
             System.out.println("↳ (2) Coin Flip");
             System.out.println("↳ (3) Chance Game");
-            System.out.println("↳ (4) Exit SunGames");
+            System.out.println("↳ (4) Blackjack");
+            System.out.println("↳ (5) Exit SunGames");
             System.out.print("Choice: ");
 
             String input = scan.nextLine().trim();
-            if (input.equalsIgnoreCase("quit") || input.equals("4")) {
+            if (input.equalsIgnoreCase("quit") || input.equals("5")) {
                 System.out.println("Exiting SunGames. Returning to main menu.");
                 break;
             }
@@ -40,22 +43,23 @@ public class SunGames {
                 continue;
             }
 
-            if (choice < 1 || choice > 4) {
+            if (choice < 1 || choice > 5) {
                 System.out.println("Invalid choice. Try again.");
                 continue;
             }
 
+            // Gather bet
             int bet = 0;
             while (true) {
-                System.out.print("You have " + userCurrency.getCurrencyType() + money + ". Enter your bet (or type 'quit' to return): ");
+                System.out.print("You have "
+                        + userCurrency.getCurrencyType() + money
+                        + ". Enter your bet (or 'quit' to return): ");
                 String betInput = scan.nextLine().trim();
-                if (betInput.equalsIgnoreCase("quit")) {
-                    break;
-                }
+                if (betInput.equalsIgnoreCase("quit")) break;
                 try {
                     bet = Integer.parseInt(betInput);
                     if (bet <= 0 || bet > money) {
-                        System.out.println("Invalid bet amount. Must be > 0 and <= your money.");
+                        System.out.println("Invalid bet. Must be > 0 and <= your balance.");
                         continue;
                     }
                     break;
@@ -65,26 +69,18 @@ public class SunGames {
             }
             if (bet == 0) continue;
 
-            switch (choice) {
-                case 1 -> {
-                    DiceGame diceGame = new DiceGame();
-                    int result = diceGame.play(bet);
-                    money += result;
-                }
-                case 2 -> {
-                    CoinFlipGame coinFlipGame = new CoinFlipGame();
-                    int result = coinFlipGame.play(bet);
-                    money += result;
-                }
-                case 3 -> {
-                    ChanceGame chanceGame = new ChanceGame();
-                    int result = chanceGame.play(bet);
-                    money += result;
-                }
-            }
+            int result = switch (choice) {
+                case 1 -> new DiceGame().play(bet);
+                case 2 -> new CoinFlipGame().play(bet);
+                case 3 -> new ChanceGame().play(bet);
+                case 4 -> new Blackjack().play(bet, money);
+                default -> 0;
+            };
+
+            money += result;
 
             if (money <= 0) {
-                System.out.println("You lost all your money. Resetting to 100.");
+                System.out.println("You have no money left. Resetting to 100.");
                 money = 100;
             }
         }
