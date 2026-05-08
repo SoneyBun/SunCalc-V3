@@ -2,8 +2,14 @@
 >[!CAUTION]
 >Despite the programmed formulas being well known, SunCalc's Health feature should not influence any medical decisions at all.
 
+<!-- Divider -->
+---
+
 <!-- Banner -->
 <img width="2500" height="500" alt="Suncalc (2)" src="https://github.com/user-attachments/assets/d47b2322-448d-4e37-9782-2944a07acac0" />
+
+<!-- Divider -->
+---
 
 <!-- Documentation -->
 <div align="center">
